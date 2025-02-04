@@ -10,26 +10,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<main class="md:mx-auto md:w-4xl" >
+		<main class="md:mx-auto md:w-4xl border">
 			<div class="relative">
-				<div class="bg-gray-400 h-[180px] mb-[100px]"></div>
-				<div class="rounded-full left-[20px] top-[50%] absolute w-[150px] h-[150px] bg-amber-300" ></div>
+				<div class="bg-gray-400 h-[250px] mb-[100px] bg-[url(/bg.jpg)] bg-[position:50%_70%] bg-[length:100%]">
+				</div>
+				<div class="bg-white left-[20px] top-[65%] absolute rounded-full w-[170px] h-[170px] border">
+					<div class="absolute w-[150px] h-[150px] left-[10px] top-[10px] rounded-full z-50 border bg-amber-300 bg-[url(/profile.jpg)] bg-[position:50%_70%] bg-[length:100%]" ></div>
+				</div>
 			</div>
-			<div class="mx-8 md:mx-0">
+			<div class="mx-8 md:mx-0 px-8">
 
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>👨🏻‍💻 Hello, EveryOne</h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				Welcome to the official To My Website
 			</p>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
+				Let Me Introduce My Self
+				<!-- <code>astro.config.mjs</code> file. You can customize your setup with
 				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				React, or Vue to your project. -->
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<p>Here are a few Recent Project I do and Learn:</p>
 			<ul>
 				<li>Edit this page in <code>src/pages/index.astro</code></li>
 				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
@@ -38,9 +39,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
 			</ul>
 			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				In my freetime 
 			</p>
 			<p>
 				Looking for a blog template with a bit more personality? Check out <a
