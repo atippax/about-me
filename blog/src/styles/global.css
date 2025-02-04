@@ -120,11 +120,11 @@ input {
 table {
 	width: 100%;
 }
-img {
+/* img {
 	max-width: 100%;
 	height: auto;
-	/* border-radius: 8px; */
-}
+	border-radius: 8px;
+} */
 code {
 	padding: 2px 5px;
 	background-color: rgb(var(--gray-light));
@@ -152,7 +152,10 @@ hr {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
+		/* padding: 1em; */
+	}
+	.canvas{
+		width: 100%;
 	}
 }
 

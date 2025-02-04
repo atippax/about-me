@@ -3,6 +3,14 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from 'astro:content';
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+
 ---
 
 <!doctype html>
@@ -13,20 +21,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Header />
     <main >
-		<div class="relative w-full h-[200px] ">
-			<img
-			style="height: 500px;"
-			  src="https://cdn.pixabay.com/photo/2023/10/10/14/27/night-view-8306605_640.jpg"
-			  class=" absolute rounded-none brightness-50 w-full object-cover"
-			  alt=""
-			/>		  
-			<div class="absolute z-20 text-white font-extrabold logo-font">
-			  asds,asd,s
+		<div class="w-full h-[280px] md:h-[700px]">
+			<div class="h-full bg-[url(/bg.jpg)] bg-[position:60%_100%] md:bg-[position:50%_65%] bg-[length:150%] md:bg-[length:100%]  text-white font-extrabold logo-font">
+        <div class="canvas flex justify-start h-full w-full items-center px-4 md:px-4">
+          <div>
+          <div class="font-light text-[24px]">Blog & Share</div>
+          <div class="text-[40px] md:text-[100px] leading-none">
+            <div>SHARE</div>
+            <div>JOURNEY</div>
+            <div>EXPERIENCE.</div>
+          </div>
+          <div class="font-light text-[24px]">🔥 Let Have Fun!</div>
+        </div>
+
+        </div>
 			</div>
 		  </div>
-		  
-      <div class="canvas">
-        <h1>🧑‍🚀 Hello, Astronaut!</h1>
+      <div class="canvas py-8 border-x">
+        <div class="mx-4 bg-white">
+<div>
+
+        <h1>🧑‍🚀 Hello, Welcome To My Blog!</h1>
         <p>
           Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
           template. This template serves as a lightweight, minimally-styled starting
@@ -71,7 +86,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             >astro-blog-template
           </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
         </p>
+</div>
+<section>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}/`}>
+            <img width={720} height={360} src={post.data.heroImage} alt="" />
+            <h4 class="title">{post.data.title}</h4>
+            <p class="date">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+        </div>
+        
       </div>
+      
     </main>
     <Footer />
   </body>
