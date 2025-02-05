@@ -1,18 +1,15 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from "../components/FormattedDate.astro";
-const base = import.meta.env.BASE_URL.replace('/','')
-
+import FormattedDate from '../components/FormattedDate.astro';
+const base = import.meta.env.BASE_URL.replace('/', '');
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-
 ---
 
 <!doctype html>
@@ -22,92 +19,111 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body>
     <Header />
-    
-    <main >
-		<div class="w-full h-[280px] md:h-[700px]">
-			<div class="h-full bg-[url(/bgBlog.jpg)] bg-[position:60%_100%] md:bg-[position:50%_65%] bg-[length:150%] md:bg-[length:100%]  text-white font-extrabold logo-font">
-        <div class="canvas flex justify-start h-full w-full items-center px-4 md:px-4">
-          <div>
-          <div class="font-light text-[24px]">Blog & Share</div>
-          <div class="text-[40px] md:text-[100px] leading-none">
-            <div>SHARE</div>
-            <div>JOURNEY</div>
-            <div>EXPERIENCE.</div>
-          </div>
-          <div class="font-light text-[24px]">🔥 Let Have Fun!</div>
-        </div>
 
+    <main>
+      <div class="w-full h-[280px] md:h-[700px]">
+        <div
+          class="h-full bg-[url(/bgBlog.jpg)] bg-[position:60%_100%] md:bg-[position:50%_65%] bg-[length:150%] md:bg-[length:100%] text-white font-extrabold logo-font"
+        >
+          <div
+            class="canvas flex justify-start h-full w-full items-center px-4 md:px-4"
+          >
+            <div>
+              <div class="font-light text-[24px]">Blog & Share</div>
+              <div class="text-[40px] md:text-[100px] leading-none">
+                <div>SHARE</div>
+                <div>JOURNEY</div>
+                <div>EXPERIENCE.</div>
+              </div>
+              <div class="font-light text-[24px]">🔥 Let Have Fun!</div>
+            </div>
+          </div>
         </div>
-			</div>
-		  </div>
+      </div>
       <div class="canvas py-8 border-x">
         <div class="mx-4 bg-white">
-<div>
-
-        <h1>🧑‍🚀 Hello, Welcome To My Blog!</h1>
-        <p>
-          simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          This template comes with a few integrations already configured in your
-          <code>astro.config.mjs</code> file. You can customize your setup with
-          <a href="https://astro.build/integrations">Astro Integrations</a> to add
-          tools like Tailwind, React, or Vue to your project.
-        </p>
-        <p>Here are a few ideas on how to get started with the template:</p>
-        <ul>
-          <li>Edit this page in <code>src/pages/index.astro</code></li>
-          <li>
-            Edit the site header items in <code
-              >src/components/Header.astro</code>
-          </li>
-          <li>
-            Add your name to the footer in <code
-              >src/components/Footer.astro</code>
-          </li>
-          <li>
-            Check out the included blog posts in <code>src/content/blog/</code>
-          </li>
-          <li>
-            Customize the blog post page layout in <code
-              >src/layouts/BlogPost.astro</code>
-          </li>
-        </ul>
-        <p>
-          Have fun! If you get stuck, remember to <a
-            href="https://docs.astro.build/"
-            >read the docs
-          </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask
-          questions.
-        </p>
-        <p>
-          Looking for a blog template with a bit more personality? Check out <a
-            href="https://github.com/Charca/astro-blog-template"
-            >astro-blog-template
-          </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-        </p>
-</div>
-<section>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/${base}/blog/${post.id}/`}>
-            <img width={720} height={360} src={post.data.heroImage} alt="" />
-            <h4 class="title">{post.data.title}</h4>
-            <p class="date">
-              <FormattedDate date={post.data.pubDate} />
+          <div>
+            <h1>🧑‍🚀 Hello, Welcome To My Blog!</h1>
+            <p>
+              simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled
+              it to make a type specimen book. It has survived not only five
+              centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s
+              with the release of Letraset sheets containing Lorem Ipsum
+              passages, and more recently with desktop publishing software like
+              Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</section>
+            <p>
+              This template comes with a few integrations already configured in
+              your
+              <code>astro.config.mjs</code> file. You can customize your setup with
+              <a href="https://astro.build/integrations">Astro Integrations</a> to
+              add tools like Tailwind, React, or Vue to your project.
+            </p>
+            <p>Here are a few ideas on how to get started with the template:</p>
+            <ul>
+              <li>Edit this page in <code>src/pages/index.astro</code></li>
+              <li>
+                Edit the site header items in <code
+                  >src/components/Header.astro</code
+                >
+              </li>
+              <li>
+                Add your name to the footer in <code
+                  >src/components/Footer.astro</code
+                >
+              </li>
+              <li>
+                Check out the included blog posts in <code
+                  >src/content/blog/</code
+                >
+              </li>
+              <li>
+                Customize the blog post page layout in <code
+                  >src/layouts/BlogPost.astro</code
+                >
+              </li>
+            </ul>
+            <p>
+              Have fun! If you get stuck, remember to <a
+                href="https://docs.astro.build/"
+                >read the docs
+              </a> or <a href="https://astro.build/chat">join us on Discord</a> to
+              ask questions.
+            </p>
+            <p>
+              Looking for a blog template with a bit more personality? Check out <a
+                href="https://github.com/Charca/astro-blog-template"
+                >astro-blog-template
+              </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+            </p>
+          </div>
+          <section>
+            <ul>
+              {
+                posts.map((post) => (
+                  <li>
+                    <a href={`/${base}/blog/${post.id}/`}>
+                      <img
+                        width={720}
+                        height={360}
+                        src={post.data.heroImage}
+                        alt=""
+                      />
+                      <h4 class="title">{post.data.title}</h4>
+                      <p class="date">
+                        <FormattedDate date={post.data.pubDate} />
+                      </p>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
         </div>
-        
       </div>
-      
     </main>
     <Footer />
   </body>
