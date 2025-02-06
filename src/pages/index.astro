@@ -9,6 +9,8 @@ const base = import.meta.env.BASE_URL == '/' ? '' : import.meta.env.BASE_URL;
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const imageExample =
+  'data:image/png;base64,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';
 ---
 
 <!doctype html>
@@ -44,86 +46,37 @@ const posts = (await getCollection('blog')).sort(
           <div>
             <h1>🧑‍🚀 Hello, Welcome To My Blog!</h1>
             <p>
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-              This template comes with a few integrations already configured in
-              your
-              <code>astro.config.mjs</code> file. You can customize your setup with
-              <a href="https://astro.build/integrations">Astro Integrations</a> to
-              add tools like Tailwind, React, or Vue to your project.
-            </p>
-            <p>Here are a few ideas on how to get started with the template:</p>
-            <ul>
-              <li>Edit this page in <code>src/pages/index.astro</code></li>
-              <li>
-                Edit the site header items in <code
-                  >src/components/Header.astro</code
-                >
-              </li>
-              <li>
-                Add your name to the footer in <code
-                  >src/components/Footer.astro</code
-                >
-              </li>
-              <li>
-                Check out the included blog posts in <code
-                  >src/content/blog/</code
-                >
-              </li>
-              <li>
-                Customize the blog post page layout in <code
-                  >src/layouts/BlogPost.astro</code
-                >
-              </li>
-            </ul>
-            <p>
-              Have fun! If you get stuck, remember to <a
-                href="https://docs.astro.build/"
-                >read the docs
-              </a> or <a href="https://astro.build/chat">join us on Discord</a> to
-              ask questions.
-            </p>
-            <p>
-              Looking for a blog template with a bit more personality? Check out <a
-                href="https://github.com/Charca/astro-blog-template"
-                >astro-blog-template
-              </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+              for my purpose i need to share what i learn and share to another
             </p>
           </div>
-          <section>
-            <ul>
-              {
-                posts.map((post) => (
-                  <li>
-                    <a href={`${base}/blog/${post.id}/`}>
-                      <img
-                        width={720}
-                        height={360}
-                        src={post.data.heroImage}
-                        alt=""
-                      />
-                      <h4 class="title">{post.data.title}</h4>
-                      <p class="date">
-                        <FormattedDate date={post.data.pubDate} />
-                      </p>
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </section>
+          <div>
+            In my interesting is many think but i categorize and show in below
+          </div>
+          <div class="flex flex-wrap gap-8">
+            <div>
+              <a href=""> investment</a>
+              <img src={imageExample} alt="" />
+            </div>
+            <div>
+              <a href=""> A-Blog</a>
+              <img src={imageExample} alt="" />
+            </div>
+            <div>
+              <a href=""> EngPa</a>
+              <img src={imageExample} alt="" />
+            </div>
+            <div>
+              <a href=""> P-lab</a>
+              <img src={imageExample} alt="" />
+            </div>
+            <div>
+              <a href=""> Year - Review</a>
+              <img src={imageExample} alt="" />
+            </div>
+          </div>
         </div>
       </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
