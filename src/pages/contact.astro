@@ -1,14 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
-const base = import.meta.env.BASE_URL == '/' ? '' : import.meta.env.BASE_URL;
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
@@ -20,8 +14,43 @@ const posts = (await getCollection('blog')).sort(
     <Header />
 
     <main>
-      <div class="canvas py-8 s">all link</div>
+      <div class="w-full h-[280px] md:h-[700px]">
+        <div
+          class="h-full bg-[url(/contact.jpg)] bg-[position:60%_100%] md:bg-[position:50%_65%] bg-[length:150%] md:bg-[length:100%] text-white font-extrabold logo-font"
+        >
+        </div>
+      </div>
+
+      <div class="canvas py-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+        <div class="flex justify-center gap-6 text-3xl">
+          <!-- Github Icon -->
+          <a
+            href="https://github.com/atippaz"
+            target="_blank"
+            class="hover:text-gray-400 transition-colors"
+          >
+            github
+          </a>
+          <!-- LinkedIn Icon -->
+          <a
+            href="https://linkedin.com/in/atip-nasakun"
+            target="_blank"
+            class="hover:text-blue-600 transition-colors"
+          >
+            linkedin
+          </a>
+          <!-- Gmail Icon -->
+          <a
+            href="mailto:atip.nasakun.work@gmail.com"
+            class="hover:text-red-600 transition-colors"
+          >
+            gmail
+          </a>
+        </div>
+      </div>
     </main>
+
     <Footer />
   </body>
 </html>

@@ -1,0 +1,38 @@
+---
+import { getEntry, render } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import BaseHead from '../../components/BaseHead.astro';
+const { slug } = Astro.params;
+const Content = await getMarkdownContent(slug);
+
+export async function getMarkdownContent(slug: string) {
+  const post = await getEntry('activities', slug);
+  return (await render(post!)).Content;
+}
+export async function getStaticPaths() {
+  const posts = await getCollection('activities');
+
+  return posts.map((post) => {
+    return {
+      params: { slug: post.id },
+    };
+  });
+}
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="Activities" description="Activities" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <Header />
+
+    <main class="container mx-auto px-4 py-8">
+      <Content />
+    </main>
+
+    <Footer />
+  </body>
+</html>

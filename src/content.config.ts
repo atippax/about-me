@@ -14,5 +14,17 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
   }),
 });
-
-export const collections = { blog };
+const activities = defineCollection({
+  // Load Markdown and MDX files in the `src/content/blog/` directory.
+  loader: glob({ base: './src/content/activities', pattern: '**/*.{md,mdx}' }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    // Transform string to Date object
+    pubDate: z.coerce.date(),
+    // updatedDate: z.coerce.date().optional(),
+    heroImage: z.string().optional(),
+  }),
+});
+export const collections = { blog, activities };
