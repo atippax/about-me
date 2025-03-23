@@ -47,7 +47,7 @@ heroImage: '/about-me/blockMountain/bm2.jpg'
     <div class="w-full flex justify-center my-4">
       <img src="/about-me/blockMountain/bm6.jpg" alt="Alternative Text" width="500" />
     </div>
-    เเละผม ก็เล่นไปสักพักใหญ่ๆ เเละช่วงค่ำๆ มีพี่เข้ามาเเละขอให้น้องทำเคนทำสเต็กให้ ซึ่งผมก็เข้าไปดูเเละศึกษาวิธีทำสเต็ก
+    เเละผม ก็เล่นไปสักพักใหญ่ๆ เเละช่วงค่ำๆ มีพี่เข้ามาเเละขอให้น้องเนมาทำสเต็กให้ ซึ่งผมก็เข้าไปดูเเละศึกษาวิธีทำสเต็ก
     <div class="w-full flex justify-center my-4">
       <img src="/about-me/blockMountain/bm10.webp" alt="Alternative Text" width="500" />
     </div>
