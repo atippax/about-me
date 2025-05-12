@@ -1,6 +1,6 @@
 ---
 title : "idea"
-description : "wanted list"
+description : "game idea"
 pubDate : "april 18 2025"
 heroImage : ""
 ---
