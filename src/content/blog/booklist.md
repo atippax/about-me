@@ -5,51 +5,51 @@ pubDate : "april 18 2025"
 heroImage : ""
 ---
 book wanted list 
-[ ] when the money die 
-[ ] Globalizing Caplitor
-[ ] house of rothchild 
-[ ] let them go thoery
-[ ]  ultar process people
-[ ] เพื่อนรักที่หายสาบสูญ 
-[ ] black swan 
-[ ] fiat standard 
-[ ] bitcoin standard 
-[ ] sapiens
-[ ] new world order 1 
-[ ] new world order 2 
-[ ] Money 101
-[ ] จิตวิทยาการเงิน
-[ ] กินกบ
-[ ] กล้าที่จะถูกเกลียด
-[ ] คุณเก่งที่พูดไม่เป็น
-[ ] คนฉลาดคิดอะไรก่อนพูด
-[ ] ขายด้วยจิตวิทยา 
-[ ] การเจรจาต่อรอง 101
-[ ] จิตวิทยาแค้1 % 
-[ ] Oreilly mastering the lightning network
-[ ] Same as ever 
-[ ] Good vibe good life
-[ ] Hidden pototential 
-[ ] Leader wisdom 
-[ ] The magic of whinking bug 
-[ ] Harvard 4.30 a.m วิธีคิด
-[ ] Manifest
-[ ] The nexus
-[ ] Ego is the enermy
-[ ] อย่านึกถึงอนาคตจนลืมความสุขปัจจุบัน
-[ ] สมการความโชคดี
-[ ] รู้จิตใจคนผ่านท่าทาง
-[ ] Web3 topjira alex tap
-[ ] ตีเเต กลยุทธืเล่นหุ้น ดร.นิเวศ
-[ ] 100 Ways to Improve Your Writing - Gary Provost (2019 Edition)
-[ ] Emotaional
-[ ] Market wizard
-[ ] เมื่อจิตวิทยาทำให้คนรักกัน 
-[ ] Everyday ubuntu อุบันตู
-[ ] The man searching for meaning 
-[ ] Thinging fast and slow
-[ ] Zero to one
-[ ] Blitzcalling
-[ ] Super intelligent
-[ ] Wining 
-[ ] Laws of ux oreilly
+[ ] when the money die <br>
+[ ] Globalizing Caplitor <br>
+[ ] house of rothchild <br>
+[ ] let them go thoery <br>
+[ ]  ultar process people <br>
+[ ] เพื่อนรักที่หายสาบสูญ  <br>
+[ ] black swan  <br>
+[ ] fiat standard <br>
+[ ] bitcoin standard <br>
+[ ] sapiens <br>
+[ ] new world order 1 <br>
+[ ] new world order 2 <br>
+[ ] Money 101 <br>
+[ ] จิตวิทยาการเงิน <br>
+[ ] กินกบ <br>
+[ ] กล้าที่จะถูกเกลียด <br>
+[ ] คุณเก่งที่พูดไม่เป็น <br>
+[ ] คนฉลาดคิดอะไรก่อนพูด <br>
+[ ] ขายด้วยจิตวิทยา  <br>
+[ ] การเจรจาต่อรอง 101 <br>
+[ ] จิตวิทยาแค้1 % <br>
+[ ] Oreilly mastering the lightning network <br>
+[ ] Same as ever  <br>
+[ ] Good vibe good life <br>
+[ ] Hidden pototential  <br>
+[ ] Leader wisdom <br>
+[ ] The magic of whinking bug <br>
+[ ] Harvard 4.30 a.m วิธีคิด <br>
+[ ] Manifest <br>
+[ ] The nexus <br>
+[ ] Ego is the enermy <br>
+[ ] อย่านึกถึงอนาคตจนลืมความสุขปัจจุบัน <br>
+[ ] สมการความโชคดี <br> 
+[ ] รู้จิตใจคนผ่านท่าทาง <br>
+[ ] Web3 topjira alex tap <br>
+[ ] ตีเเต กลยุทธืเล่นหุ้น ดร.นิเวศ <br>
+[ ] 100 Ways to Improve Your Writing - Gary Provost (2019 Edition) <br>
+[ ] Emotaional <br>
+[ ] Market wizard <br>
+[ ] เมื่อจิตวิทยาทำให้คนรักกัน  <br>
+[ ] Everyday ubuntu อุบันตู <br>
+[ ] The man searching for meaning <br> 
+[ ] Thinging fast and slow <br>
+[ ] Zero to one <br>
+[ ] Blitzcalling <br>
+[ ] Super intelligent <br>
+[ ] Wining  <br>
+[ ] Laws of ux oreilly <br>
