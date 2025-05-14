@@ -4,7 +4,7 @@ description : "wanted list"
 pubDate : "april 18 2025"
 heroImage : ""
 ---
-book wanted list 
+book wanted list <br>
 [ ] when the money die <br>
 [ ] Globalizing Caplitor <br>
 [ ] house of rothchild <br>
@@ -53,3 +53,4 @@ book wanted list
 [ ] Super intelligent <br>
 [ ] Wining  <br>
 [ ] Laws of ux oreilly <br>
+[ ] Priciple of economics ammous saifedean<br>
