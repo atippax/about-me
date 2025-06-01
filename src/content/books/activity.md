@@ -1,8 +1,8 @@
 ---
 title: 'หนังสือที่เคยอ่าน'
-description: 'a block-mountain event at cnx'
+description: 'สรุปหนังสือ'
 pubDate: 'Jul 08 2022'
-heroImage: '/about-me/blockMountain/bm2.jpg'
+heroImage: '/about-me/activities/book.jpg'
 order: 1
 ---
-## The Daily Stoic (สโตอิกรายวัน)
+## สรุปหนังสือที่เคยอ่าน
