@@ -10,24 +10,11 @@
         "description": {
           "type": "string"
         },
-        "pubDate": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
         "heroImage": {
           "type": "string"
+        },
+        "order": {
+          "type": "number"
         },
         "$schema": {
           "type": "string"
@@ -35,8 +22,7 @@
       },
       "required": [
         "title",
-        "description",
-        "pubDate"
+        "description"
       ],
       "additionalProperties": false
     }

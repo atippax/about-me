@@ -1,0 +1,59 @@
+---
+import { getEntry, render, type RenderedContent } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import BaseHead from '../../../components/BaseHead.astro';
+import fs from 'fs';
+import path from 'path';
+
+const { slug } = Astro.params;
+const Content = await getMarkdownContent(slug);
+
+export async function getMarkdownContent(slug: string) {
+  const post = await getEntry('book', slug);
+  const currentPath = post?.filePath?.split('/index.md')[0] || ''
+  const folderPath = path.join(currentPath);
+  const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.md')&&!f.startsWith('index')).sort();
+    const htmlParts: {
+    id: string;
+    body?: string;
+    collection: "bookPage";
+    data: any;
+    rendered?: RenderedContent;
+    filePath?: string;
+}[] = [];
+
+  for (const filename of files) {
+  const post = await getEntry('bookPage', slug+'/'+filename.split('.md')[0]);
+    htmlParts.push(post!);
+  }
+
+  const data = (await render({...post!,body:[post?.body,htmlParts.map(x=>x.body).join('')].join(''),rendered:{html:[post?.rendered?.html ,htmlParts.map(x=>x.rendered?.html).join('<hr/>')].join('<br/>'),metadata:post?.rendered?.metadata}})).Content;
+  return data
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection('book');
+  return posts.map((post) => {
+    return {
+      params: { slug: post.id },
+    };
+  });
+}
+
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="Blog" description="Blogs" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <Header />
+    <main class="container mx-auto px-4 py-8">
+      <Content />
+    </main>
+
+    <Footer />
+  </body>
+</html>
