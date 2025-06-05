@@ -55,3 +55,9 @@ book wanted list <br>
 [ ] Laws of ux oreilly <br>
 [ ] BIG DEBT CRISIS <br>
 [ ] Priciple of economics ammous saifedean<br>
+[ ] น่าจะรู้อย่างนี้ตั้งเเต่ตอนอายุ 20
+[ ] When | วิทยาศาสตร์บนเข็มนาฬิกา
+[ ] Man’s search for meaning ชีวิตไม่ไร้ความหมาย
+[ ] Hidden potential
+[ ] คู่มือเอาตัวรอด จากเหตุการณ์ฉิบหายขั้นสุด
+[ ] กฎการสนทนาของคนคุยสนุก | The Rule of the fascinating talk
